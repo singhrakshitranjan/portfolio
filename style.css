@@ -12,10 +12,10 @@
 }
 
 :root {
-  --bg-color: #0f0e17; /* Midnight Black */
---second-bg-color: #ff8906; /* Neon Orange */
---text-color: #eaeaea; /* Soft White */
---main-color: #ff006e; /* Hot Pink */
+--bg-color: #fdfcdc; /* Light Cream */
+--second-bg-color: #8ecae6;
+--text-color: #1a535c; /* Teal */
+--main-color: #ff6b6b; /* Coral Red */
 
 
 }
