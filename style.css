@@ -641,7 +641,6 @@ span {
 .contact form .btn-box.btns .btn {
     cursor: pointer;
 }
-
 .footer {
     display: flex;
     justify-content: space-between;
@@ -671,6 +670,7 @@ span {
     border-radius: .6rem;
     z-index: 1;
     overflow: hidden;
+    transition: background 0.3s, border 0.3s; /* Reduced transition time */
 }
 
 .footer-iconTop a::before {
@@ -682,7 +682,7 @@ span {
     height: 100%;
     background: var(--second-bg-color);
     z-index: -1;
-    transition: .5s;
+    transition: width 0.3s; /* Reduced from 0.5s to 0.3s */
 }
 
 .footer-iconTop a:hover::before {
@@ -692,7 +692,7 @@ span {
 .footer-iconTop a i {
     font-size: 2.4rem;
     color: var(--bg-color);
-    transition: .5s;
+    transition: color 0.3s; /* Reduced from 0.5s to 0.3s */
 }
 
 .footer-iconTop a:hover i {
@@ -708,6 +708,8 @@ span {
     height: 100%;
     background: var(--bg-color);
     z-index: 98;
+    animation: none; /* Disable animations for instant reload */
+    transition: none; /* Remove transitions */
 }
 
 .animate.home-img {
@@ -718,19 +720,18 @@ span {
 .navbar .animate,
 #menu-icon .animate,
 .home.show-animate .animate {
-    animation: showRight 1s ease forwards;
-    animation-delay: calc(.3s * var(--i));
+    animation: none; /* Remove animations */
 }
 
 .animate.scroll {
-    transition: 1s ease;
-    transition-delay: calc(.3s / var(--i));
-    animation: none;
+    transition: none; /* Remove delays for scroll effects */
+    animation: none; /* Ensure no animation during scroll */
 }
 
 section:nth-child(odd) .animate.scroll,
 .footer .animate.scroll {
     background: var(--second-bg-color);
+    transition: none; /* Remove scroll transition delays */
 }
 
 .education .education-box .animate.scroll {
@@ -742,19 +743,20 @@ section:nth-child(odd) .animate.scroll,
 .skills.show-animate .animate.scroll,
 .contact.show-animate .animate.scroll,
 .footer.show-animate .animate.scroll {
-    transition-delay: calc(.3s * var(--i));
+    transition: none; /* Ensure immediate rendering */
     width: 0;
 }
 
+/* Text Selection Styling */
 ::-moz-selection { /* Code for Firefox */
     color: var(--second-bg-color);
     background: var(--main-color);
-  }
+}
   
 ::selection {
     color: var(--second-bg-color);
     background: var(--main-color);
-  }
+}
 
 
 /* BREAKPOINTS */
