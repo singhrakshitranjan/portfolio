@@ -773,7 +773,7 @@ section:nth-child(odd) .animate.scroll,
 #projects {
     padding: 100px 20px;
     text-align: center;
-    background: var(--bg-color); /* Light Cream */
+    background: var(--second-bg-color); /* Light Cream */
     color: var(--text-color); /* Teal */
 }
 
